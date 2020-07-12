@@ -33,7 +33,8 @@ import { Link } from 'react-router-dom';
                                         {comment.comment}<br/>
                                         -- {comment.author},{date}
                                     </li>
-                                </ul>);                        
+                                </ul>
+                            );                        
                         })}
                     </div>
                 );
