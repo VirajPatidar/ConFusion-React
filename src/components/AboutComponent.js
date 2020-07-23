@@ -1,10 +1,12 @@
 import React from 'react';
 import { Breadcrumb, BreadcrumbItem, Card, CardBody, CardHeader, Media } from 'reactstrap';
 import { Link } from 'react-router-dom';
+import {baseUrl} from "../shared/baseUrl";
+import {CSSTransition, TransitionGroup} from "react-transition-group";
 
 function About(props) {
 
-    const leaders = props.leaders.map((leader) => {
+    const leaders = props.leaders.leaders.map((leader) => {
         return (
             <RenderLeader key={leader.id} leader={leader}/>
         );
@@ -14,7 +16,7 @@ function About(props) {
         return (
             <Media className='mt-3'>
                 <Media left top className='mr-3'>
-                    <Media object src={leader.image} alt={leader.name}/>
+                    <Media object src={baseUrl + leader.image} alt={leader.name}/>
                 </Media>
                 <Media body>
                     <Media heading>
@@ -82,10 +84,14 @@ function About(props) {
                     <h2>Corporate Leadership</h2>
                 </div>
                 <div className="col-12">
-                    <RenderLeader leader={props.leaders[0]}/>
-                    <Media list>
-                        {leaders}
-                    </Media>
+                    {/* <RenderLeader leader={props.leaders[0]}/> */}
+                    <TransitionGroup>
+                        <CSSTransition classNames="page" timeout={300}>
+                            <Media list>
+                                {leaders}
+                            </Media>
+                        </CSSTransition>
+                    </TransitionGroup>
                 </div>
             </div>
         </div>
