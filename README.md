@@ -1,4 +1,14 @@
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+# ConFusion: Web App for a Restaurant, Developed using React, Reactstrap and Redux
+
+Topics covered in this section are:
+
+-   Using Create-react-app
+-   Integrating git, npm and using NodeJs
+-   Integrating various packages
+
+**Main Task:** Implement a website using React, Reactstrap and Rdux, for the fictional the restaurant "conFusion".
+
+This project was bootstrapped with [Create React App] (https://github.com/facebook/create-react-app).
 
 ## Available Scripts
 
